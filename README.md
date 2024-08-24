@@ -12,9 +12,6 @@ A web-based, real-time bus viewer for Transdev Services
 - Drawing individual bus routes
 - Service warnings
 
-<details>
-  <summary>Site Preview</summary>
-  ![a](preview.png)
-</details>
-
 [Try it out](https://transdev.live)
+
+![screenshot](preview.png)
