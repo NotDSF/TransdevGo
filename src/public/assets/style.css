@@ -4,6 +4,7 @@ body {
     background-color: #181818;
     font-family: "Ubuntu", sans-serif;
     color: #d3d0d0;
+    overflow: hidden;
 }
 
 .nav {
