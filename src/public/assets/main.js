@@ -131,6 +131,7 @@ let markers = [];
         mapTypeControl: false,
         streetViewControl: false,
         colorScheme: ColorScheme.DARK,
+        gestureHandling: "greedy"
     });
 
     DRAW_BUSES();
