@@ -1,0 +1,65 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #181818;
+    font-family: "Ubuntu", sans-serif;
+    color: #d3d0d0;
+}
+
+.nav {
+    margin: 10px;
+    display: flex;
+    gap: 3px;
+    width: 99%;
+}
+
+.title {
+    margin: 10px;
+    font-size: 24px;
+    background-color: #f76d37;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: rgb(247, 247, 247);
+    margin-right: 0px;
+}
+
+.selector {
+    font-size: 18px;
+    background: none;
+    border-radius: 5px;
+    color: rgb(202, 199, 199);
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    padding-left: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #242424;
+    padding: 9px;
+    margin-left: 3px;
+}
+
+#map {
+    width: 100vw;
+    height: calc(100vh - 145px);
+    position: fixed;
+    overflow: visible;
+    z-index: 1;
+}
+
+p {
+    padding: 5px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track, 
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece,
+.gm-style .gm-style-iw-c,
+.gm-style .gm-style-iw-t::after { 
+  background: #181818;
+  color: white;
+}

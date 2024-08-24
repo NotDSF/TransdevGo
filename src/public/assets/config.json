@@ -1,0 +1,29 @@
+{
+    "regions": [
+        {
+            "name": "Burnley",
+            "region": "burnleybus",
+            "loc": [53.789108, -2.230575]
+        },
+        {
+            "name": "Coastliner",
+            "region": "coastliner",
+            "loc": [53.958332, -1.080278]
+        },
+        {
+            "name": "Flyer",
+            "region": "flyer",
+            "loc": [53.799999, -1.750000]
+        },
+        {
+            "name": "Rosso",
+            "region": "rosso",
+            "loc": [53.6833306, -2.249999]
+        },
+        {
+            "name": "TeamPennie",
+            "region": "teampennine",
+            "loc": [54.0, -1.499998]
+        }
+    ]
+}
