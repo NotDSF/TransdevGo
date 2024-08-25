@@ -26,17 +26,18 @@ body {
 
 .selector {
     font-size: 18px;
-    background: none;
     border-radius: 5px;
     color: rgb(202, 199, 199);
     border: none;
+    outline: hidden;
     font-family: "Ubuntu", sans-serif;
     padding-left: 7px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: #242424;
+    background: none;
     padding: 9px;
-    margin-left: 3px;
+    margin-left: 1px;
+    font-weight: 500;
 }
 
 #map {

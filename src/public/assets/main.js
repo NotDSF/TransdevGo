@@ -99,17 +99,15 @@ let markers = [];
                 }
 
                 infoWindow.setContent(`
-                    <div id="InfoWindow">
-                        <h2 style="color: white; margin: 0px;">
-                            ${vehicle.PublishedLineName} - ${vehicle.DestinationStopName}
-                        </h2>
+                    <h2 style="color: white; margin: 0px;">
+                        ${vehicle.PublishedLineName} - ${vehicle.DestinationStopName}
+                    </h2>
                         
-                        <p style="color: white; padding: 0px;">${TimeMessage}</p>
-                        <p style="color: white; padding: 0px;">Destination: ${vehicle.DestinationStopName}</p>
-                        <p style="color: white; padding: 0px;">Depature: ${new Date(vehicle.DepartureTime).toLocaleString().split(", ").pop()}</p>
-                        <p style="color: white; padding: 0px;">Stationary: ${vehicle.VehicleAtStop ? "Yes" : "No"}</p>
-                        <p style="color: white; padding: 0px;">Last Updated: ${new Date(vehicle.RecordedAtTime).toLocaleString().split(", ").pop()}</p>
-                    </div>
+                    <p style="color: white; padding: 0px;">${TimeMessage}</p>
+                    <p style="color: white; padding: 0px;">Destination: ${vehicle.DestinationStopName}</p>
+                    <p style="color: white; padding: 0px;">Depature: ${new Date(vehicle.DepartureTime).toLocaleString().split(", ").pop()}</p>
+                    <p style="color: white; padding: 0px;">Stationary: ${vehicle.VehicleAtStop ? "Yes" : "No"}</p>
+                    <p style="color: white; padding: 0px;">Last Updated: ${new Date(vehicle.RecordedAtTime).toLocaleString().split(", ").pop()}</p>
                 `)
                 infoWindow.open(map, marker);
             });
