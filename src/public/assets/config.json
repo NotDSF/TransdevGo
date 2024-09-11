@@ -3,27 +3,42 @@
         {
             "name": "Burnley",
             "region": "burnleybus",
-            "loc": [53.789108, -2.230575]
+            "location": [53.789108, -2.230575]
         },
         {
             "name": "Coastliner",
             "region": "coastliner",
-            "loc": [53.958332, -1.080278]
+            "location": [53.958332, -1.080278]
         },
         {
             "name": "Flyer",
             "region": "flyer",
-            "loc": [53.799999, -1.750000]
+            "location": [53.799999, -1.750000]
         },
         {
             "name": "Rosso",
             "region": "rosso",
-            "loc": [53.6833306, -2.249999]
+            "location": [53.6833306, -2.249999]
         },
         {
-            "name": "TeamPennie",
+            "name": "Team Pennie",
             "region": "teampennine",
-            "loc": [54.0, -1.499998]
+            "location": [54.0, -1.499998]
+        },
+        {
+            "name": "Blackburn",
+            "region": "blackburnbus",
+            "location": [53.750088187, -2.481526304]
+        },
+        {
+            "name": "Harrogate",
+            "region": "harrogatebus",
+            "location": [53.9908, -1.5373]
+        },
+        {
+            "name": "Keighley",
+            "region": "keighleybus",
+            "location": [53.8679, -1.9066]
         }
     ]
 }

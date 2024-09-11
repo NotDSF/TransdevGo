@@ -23,13 +23,13 @@ async function GetBuses() {
     });
 }
 
-async function SelectorChanged(node) {
+async function SelectorChanged() {
     const data = REGIONS.get(Selector.value);
     if (!data) return;
 
     SELECTED_REGION = data.region;
     map.setZoom(12);
-    map.setCenter(new google.maps.LatLng(...data.loc))
+    map.setCenter(new google.maps.LatLng(...data.location))
     DRAW_BUSES();
 }
 
@@ -41,7 +41,7 @@ function CreateOption(name, region) {
     Selector.appendChild(node);
 }
 
-let markers = [];
+const markers = [];
 
 (async () => {
     const { ColorScheme } = await google.maps.importLibrary("core")
@@ -115,8 +115,8 @@ let markers = [];
         }
     }
 
-    for (const { name, region, loc } of await GetRegions()) {
-        REGIONS.set(region, { name, region, loc });
+    for (const { name, region, location } of await GetRegions()) {
+        REGIONS.set(region, { name, region, location });
         CreateOption(name, region);
     }
 
@@ -134,17 +134,16 @@ let markers = [];
 
     DRAW_BUSES();
     
-    let yes = 0;
+    let counter = 0;
     setInterval(() => {
-        if (yes == 15) {
+        if (counter == 15) {
             DRAW_BUSES();
-            yes = 0;
-            InfoLabel.textContent = `Updates in 15 seconds...`;
-            return;
+            counter = 0;
+            return InfoLabel.textContent = `Updates in 15 seconds...`;
         }
 
-        InfoLabel.textContent = `Updates in ${15 - yes} seconds...`;
-        yes++;
+        InfoLabel.textContent = `Updates in ${15 - counter} seconds...`;
+        counter++;
     }, 1000);
 
     navigator.geolocation.getCurrentPosition((position) => {
