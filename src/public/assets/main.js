@@ -4,6 +4,7 @@ const Selector = document.getElementById("selector");
 
 let map;
 let DRAW_BUSES;
+let LOC_MARK;
 let REGIONS = new Map();
 let SELECTED_REGION = Selector.value.length ? Selector.value : "burnleybus" 
 
@@ -132,6 +133,11 @@ const markers = [];
         gestureHandling: "greedy"
     });
 
+    const dot = document.createElement("div");
+    dot.className = "dot";
+    
+    LOC_MARK = new AdvancedMarkerElement({ content: dot });
+
     DRAW_BUSES();
     
     let counter = 0;
@@ -146,8 +152,21 @@ const markers = [];
         counter++;
     }, 1000);
 
-    navigator.geolocation.getCurrentPosition((position) => {
-        map.setZoom(12);
-        map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude))
-    });
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            if (!LOC_MARK.map) {
+                LOC_MARK.setMap(map);
+            }
+    
+            const pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            LOC_MARK.position = pos;
+            map.setZoom(12);
+            map.setCenter(pos);
+        });
+    
+        navigator.geolocation.watchPosition((position) => {
+            const pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            LOC_MARK.position = pos;
+        });
+    }
 })();
